@@ -111,7 +111,7 @@
                         console.log(newImageLinks)
                         // Only add new images
                         
-                        let myStringArray = newImageLinks.filter(x => old_files.includes(x));
+                        let myStringArray = newImageLinks.filter(x => !old_files.includes(x));
                         var arrayLength = myStringArray.length;
                         old_files = newImageLinks;
                         
