@@ -77,6 +77,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
 <script>
+    
+    var old_store;
 
     // Grab links for images from backend api
     function fetchImageLinks() {
@@ -94,13 +96,14 @@
                     //
                 } else {
                   
-                    if ( false ) {
+                    if ( fetchedImageLinks == old_store ) {
                         console.log('images arr are equal')
                         // do nothing
                     } else {
                         console.log('images arr are not equal')
                         // update gallery with new image urls. Only compare actual url without SAS token query string
                         var newImageLinks = fetchedImageLinks;
+                        old_store = fetchedImageLinks
                         console.log('differene is: ')
                         console.log(newImageLinks)
                         // Only add new images
