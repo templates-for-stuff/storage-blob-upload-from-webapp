@@ -105,19 +105,15 @@
                 // do nothing  
             } else {
                 // Check if we have a gallery initialized
-                if ( _.isEmpty(gallery) ) {
+                if ( false) {
                     //
                 } else {
-                    // check if images are equal to array
-                    console.log('currently in gallery:')
-                    console.log(gallery.list)
-                    var imageLinksEqual = _.isEqual(_.sortBy(gallery.list.map(s => s.split("?")[0])), _.sortBy(fetchedImageLinks.map(s => s.split("?")[0])))
-                    if ( imageLinksEqual ) {
+                  
+                    if ( false ) {
                         console.log('images arr are equal')
                         // do nothing
                     } else {
                         console.log('images arr are not equal')
-
                         // update gallery with new image urls. Only compare actual url without SAS token query string
                         var newImageLinks = _.difference(fetchedImageLinks.map(s => s.split("?")[0]), gallery.list.map(s => s.split("?")[0]))
 
@@ -130,16 +126,14 @@
                         for (var i = 0; i < arrayLength; i++) {
                         console.log(myStringArray[i]);
                         
-                         var a = document.createElement('a');
-                         var linkText = document.createTextNode("my title text");
-                         a.appendChild(linkText);
-                         a.title = "my title text";
-                         a.href = "www.google.com";
-                         document.body.appendChild(a);
+                        var a = document.createElement('a');
+                        var linkText = document.createTextNode("my title text");
+                        a.appendChild(linkText);
+                        a.title = "my title text";
+                        a.href = "www.google.com";
+                        document.body.appendChild(a);
                        
                         }
-
-
                     }
                 }       
             }     
