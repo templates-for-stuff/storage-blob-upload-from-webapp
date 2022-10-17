@@ -79,6 +79,7 @@
 <script>
     
     var old_store;
+    var old_files;
 
     // Grab links for images from backend api
     function fetchImageLinks() {
@@ -104,12 +105,15 @@
                         // update gallery with new image urls. Only compare actual url without SAS token query string
                         var newImageLinks = fetchedImageLinks;
                         old_store = fetchedImageLinks.length;
+                        
+                        
                         console.log('differene is: ')
                         console.log(newImageLinks)
                         // Only add new images
                         
-                        var myStringArray = newImageLinks;
+                        let myStringArray = newImageLinks.filter(x => old_files.includes(x));
                         var arrayLength = myStringArray.length;
+                        old_files = newImageLinks;
                         
                         for (var i = 0; i < arrayLength; i++) {
                             
