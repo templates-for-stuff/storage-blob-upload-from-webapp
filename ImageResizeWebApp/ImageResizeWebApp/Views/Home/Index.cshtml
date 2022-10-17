@@ -115,12 +115,13 @@
                             
                         console.log(myStringArray[i]);
                         var a = document.createElement('a');
-                        a.setAttribute('target', '_blank');
+                        
                         var linkText = document.createTextNode(myStringArray[i]);
                         var fields = myStringArray[i].split('/');
                         a.appendChild(linkText);
                         a.title = fields[1] + "<br/>";
                         a.href = myStringArray[i];
+                        a.target = '_blank';
             
                         document.getElementById("stored-reports").appendChild(a);
                        
