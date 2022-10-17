@@ -110,7 +110,7 @@
                         console.log(newImageLinks)
                         // Only add new images
                         
-                        var myStringArray = newImageLinks.filter(x => !old_files.includes(x));
+                        var myStringArray = _.difference(newImageLinks, old_files);
                         var arrayLength = myStringArray.length;
                         old_files = newImageLinks;
                         
