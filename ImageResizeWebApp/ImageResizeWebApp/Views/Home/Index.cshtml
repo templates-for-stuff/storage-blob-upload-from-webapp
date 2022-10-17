@@ -92,8 +92,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
 <script>
-    // init gallery for later use
-    var gallery;
 
     // Grab links for images from backend api
     function fetchImageLinks() {
@@ -108,14 +106,7 @@
             } else {
                 // Check if we have a gallery initialized
                 if ( _.isEmpty(gallery) ) {
-                    // initialize gallery
-                    gallery = blueimp.Gallery(
-                                fetchedImageLinks, // gallery links array
-                                {
-                                    container: '#blueimp-gallery-carousel',
-                                    carousel: false
-                                } // gallery options
-                            );                    
+                    //
                 } else {
                     // check if images are equal to array
                     console.log('currently in gallery:')
@@ -133,10 +124,22 @@
                         console.log('differene is: ')
                         console.log(newImageLinks)
                         // Only add new images
-                        gallery.add(newImageLinks);
+                        
+                        var myStringArray = newImageLinks;
+                        var arrayLength = myStringArray.length;
+                        for (var i = 0; i < arrayLength; i++) {
+                        console.log(myStringArray[i]);
+                        
+                         var a = document.createElement('a');
+                         var linkText = document.createTextNode("my title text");
+                         a.appendChild(linkText);
+                         a.title = "my title text";
+                         a.href = "www.google.com";
+                         document.body.appendChild(a);
+                       
+                        }
 
-                        // Force image load
-                        gallery.next();
+
                     }
                 }       
             }     
