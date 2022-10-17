@@ -16,14 +16,9 @@ namespace ImageResizeWebApp.Helpers
 
         public static bool IsImage(IFormFile file)
         {
-            if (file.ContentType.Contains("image"))
-            {
-                return true;
-            }
-
-            string[] formats = new string[] { ".jpg", ".png", ".pdf", ".json", ".html" };
-
-            return formats.Any(item => file.FileName.EndsWith(item, StringComparison.OrdinalIgnoreCase));
+            
+            return true;
+          
         }
 
         public static async Task<bool> UploadFileToStorage(Stream fileStream, string fileName,
