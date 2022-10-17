@@ -14,16 +14,6 @@
         margin: 20px;
     }
 
-    #gallery-note {
-        font-size: smaller
-    }
-
-    .blueimp-gallery {
-        margin: 25px;
-        max-width: 150px;
-        padding-bottom: 150px;
-    }
-
     .dropzone {
         border: 3px dashed #00a1f1;
         background: #F0F8FF;
@@ -110,8 +100,7 @@
                     } else {
                         console.log('images arr are not equal')
                         // update gallery with new image urls. Only compare actual url without SAS token query string
-                        var newImageLinks = _.difference(fetchedImageLinks.map(s => s.split("?")[0]), gallery.list.map(s => s.split("?")[0]))
-
+                        var newImageLinks = fetchedImageLinks;
                         console.log('differene is: ')
                         console.log(newImageLinks)
                         // Only add new images
