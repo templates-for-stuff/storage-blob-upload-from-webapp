@@ -98,7 +98,7 @@
     // Grab links for images from backend api
     function fetchImageLinks() {
         // Fetch images
-        $.get("api/Images/thumbnails", function(fetchedImageLinks) {
+        $.get("api/Images/json", function(fetchedImageLinks) {
             console.log(fetchedImageLinks)
 
             // Check if anything is in there
