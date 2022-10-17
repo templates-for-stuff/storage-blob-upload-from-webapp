@@ -119,10 +119,10 @@
                         var linkText = document.createTextNode(myStringArray[i]);
                         var fields = myStringArray[i].split('/');
                         a.appendChild(linkText);
-                        a.title = fields[1] + "<br/>";
+                        a.title = fields[1];
                         a.href = myStringArray[i];
                         a.target = '_blank';
-            
+                        document.getElementById("stored-reports").innerHTML += "<br>"
                         document.getElementById("stored-reports").appendChild(a);
                        
                         }
