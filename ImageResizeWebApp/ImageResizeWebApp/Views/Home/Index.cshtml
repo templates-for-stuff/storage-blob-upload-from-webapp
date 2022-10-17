@@ -96,14 +96,14 @@
                     //
                 } else {
                   
-                    if ( fetchedImageLinks == old_store ) {
+                    if ( fetchedImageLinks.length == old_store ) {
                         console.log('images arr are equal')
                         // do nothing
                     } else {
                         console.log('images arr are not equal')
                         // update gallery with new image urls. Only compare actual url without SAS token query string
                         var newImageLinks = fetchedImageLinks;
-                        old_store = fetchedImageLinks
+                        old_store = fetchedImageLinks.length;
                         console.log('differene is: ')
                         console.log(newImageLinks)
                         // Only add new images
@@ -118,7 +118,7 @@
                         var linkText = document.createTextNode(myStringArray[i]);
                         var fields = myStringArray[i].split('/');
                         a.appendChild(linkText);
-                        a.title = fields[-1] + "<br/>";
+                        a.title = fields[1] + "<br/>";
                         a.href = myStringArray[i];
                         document.getElementById("stored-reports").appendChild(a);
                        
