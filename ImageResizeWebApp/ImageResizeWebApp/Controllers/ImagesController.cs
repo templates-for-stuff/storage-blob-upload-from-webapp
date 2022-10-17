@@ -40,13 +40,12 @@ namespace ImageResizeWebApp.Controllers
 
                 foreach (var formFile in files)
                 {
-                        if (formFile.Length > 0)
-                        {
+                      
                             using (Stream stream = formFile.OpenReadStream())
                             {
                                 isUploaded = await StorageHelper.UploadFileToStorage(stream, formFile.FileName, storageConfig);
                             }
-                        }
+                        
         
                 }
 
