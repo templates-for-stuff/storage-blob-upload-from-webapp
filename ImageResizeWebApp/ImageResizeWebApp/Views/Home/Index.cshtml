@@ -113,8 +113,9 @@
                         console.log(myStringArray[i]);
                         var a = document.createElement('a');
                         var linkText = document.createTextNode(myStringArray[i]);
+                        var fields = myStringArray[i].split('/');
                         a.appendChild(linkText);
-                        a.title = myStringArray[i] + "<br/>";
+                        a.title = fields[-1] + "<br/>";
                         a.href = myStringArray[i];
                         document.getElementById("stored-reports").appendChild(a);
                        
