@@ -107,15 +107,15 @@
                         
                         var myStringArray = newImageLinks;
                         var arrayLength = myStringArray.length;
-                        for (var i = 0; i < arrayLength; i++) {
-                        console.log(myStringArray[i]);
                         
+                        for (var i = 0; i < arrayLength; i++) {
+                            
+                        console.log(myStringArray[i]);
                         var a = document.createElement('a');
-                        document.getElementById("stored-reports").innerText = "Hello"
-                        var linkText = document.createTextNode("my title text");
+                        var linkText = document.createTextNode(myStringArray[i]);
                         a.appendChild(linkText);
-                        a.title = "my title text";
-                        a.href = "www.google.com";
+                        a.title = myStringArray[i];
+                        a.href = myStringArray[i];
                         document.getElementById("stored-reports").appendChild(a);
                        
                         }
