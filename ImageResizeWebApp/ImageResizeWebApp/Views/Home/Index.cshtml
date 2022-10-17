@@ -96,8 +96,8 @@
                 if ( false) {
                     //
                 } else {
-                  
-                    if ( fetchedImageLinks.length == old_store ) {
+                  // fetchedImageLinks.length == old_store
+                    if ( false ) {
                         console.log('images arr are equal')
                         // do nothing
                     } else {
@@ -106,12 +106,11 @@
                         var newImageLinks = fetchedImageLinks;
                         old_store = fetchedImageLinks.length;
                         
-                        
                         console.log('differene is: ')
                         console.log(newImageLinks)
                         // Only add new images
                         
-                        let myStringArray = newImageLinks.filter(x => !old_files.includes(x));
+                        var myStringArray = newImageLinks.filter(x => !old_files.includes(x));
                         var arrayLength = myStringArray.length;
                         old_files = newImageLinks;
                         
